@@ -29,7 +29,7 @@ class ImageToPDFConverter:
 
 def main():
     root = tk.Tk()  # Create the main window
-    root.title("Iamge to PDF Converter")
+    root.title("Image to PDF Converter")
     root.geometry("400x600")  # Set the size of the window
     root.mainloop()  # Start the main event loop
 
