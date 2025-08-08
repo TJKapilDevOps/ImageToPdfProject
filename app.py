@@ -17,11 +17,11 @@ class ImageToPDFConverter:
         # This will hold the name of the output PDF file
         self.output_pdf_name = tk.StringVar()  # Initialize the output PDF name variable
         self.selected_images_listbox = tk.Listbox(
-            root, slectmode=tk.MULTIPLE)  # Create a listbox to display selected images
-        self.intialize_ui()  # Call the method to set up the user interface
+            root, selectmode=tk.MULTIPLE)  # Create a listbox to display selected images
+        self.initialize_ui()  # Call the method to set up the user interface
 
     # Method to initialize the user interface
-    def intialize_ui(self):
+    def initialize_ui(self):
         title_label = tk.Label(
             self.root, text="Image to PDF Converter", font=("Helvetica", 24, "bold"))  # Create a label for the title
         title_label.pack(pady=10)
@@ -30,6 +30,9 @@ class ImageToPDFConverter:
 def main():
     root = tk.Tk()  # Create the main window
     root.title("Image to PDF Converter")
+    # Create an instance of the ImageToPDFConverter class
+    # Initialize the converter with the root window
+    converter = ImageToPDFConverter(root)
     root.geometry("400x600")  # Set the size of the window
     root.mainloop()  # Start the main event loop
 
